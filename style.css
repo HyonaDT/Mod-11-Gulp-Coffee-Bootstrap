@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+.background-section h3,
+.background-section p {
+  color: #ffffff;
+
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.size-select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  min-width: 120px;
+}
+
+.size-select option {
+  background-color: #082B59;
+  color: #ffffff;
+  padding: 12px;
+}
+
+.size-select:hover {
+  border-color: #D98555;
+}
+
+.size-select:focus {
+  border-color: #D98555;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #082B59;
+  margin: 5% auto;
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #D98555;
+}
+
+/* Modal Image Styles */
+.modal-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 0 auto 20px auto;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(8, 43, 89, 0.1);
+}
+
+/* Modal Text Styles */
+.modal-content h2 {
+  margin-top: 20px;
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: -10px;
+}
+
+.modal-content p {
+  color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.modal-content h3 {
+  color: #f2f2f2;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+/* Updated Button Style */
+
+.modal-button {
+  background-color: #ffffff;
+  color: #082B59;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.modal-button:hover {
+  background-color: #0a3670;
+  transform: translateY(-2px);
+}
+
+/* Divider Line */
+.modal-divider {
+  height: 2px;
+  background-color: rgba(8, 43, 89, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+/* Make product boxes clickable */
+.product-box {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product-box:hover {
+  transform: translateY(-5px);
+}
+
+
+.fixed-top {
+  position: fixed;
+  /* Keep the navbar at the top */
+  top: 0;
+  /* Align it to the top of the page */
+  width: 100%;
+  /* Make it full width */
+  z-index: 1000;
+  /* Ensure it stays above other content */
+}
+
+body {
+  padding-top: 70px;
+  /* Adjust this based on your navbar height */
+}
+
+.col-md-6 {
+  height: 100%;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+body,
+p,
+span,
+div {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.navbar {
+  position: sticky;
+  margin-top: -70px;
+  z-index: 1000;
+  background-color: #082B59;
+  border-bottom: 15px solid #D98555;
+}
+
+.navbar-brand img {
+  width: 150px;
+  height: auto;
+}
+
+.navbar-toggler {
+  border-color: #f2f2f2;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(242, 242, 242, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+
+
+.nav-link img {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.nav-icon {
+  width: 20px;
+  margin-right: 5px;
+}
+
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr {
+  border-top: 2px solid #082B59;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+.footer-image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+footer {
+  background-color: #082B59;
+  color: #d5d5d5;
+}
+
+.bg-custom {
+  background-color: #082B59;
+}
+
+hr.light-100 {
+  border-top: 1px solid #082B59;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+
+.flex-fill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Center content vertically */
+  align-items: center;
+  /* Center content horizontally */
+  width: 200px;
+  /* Set fixed width */
+  height: 200px;
+  /* Set fixed height */
+  border: 1px solid #ddd;
+  /* Optional: adds a border around each box */
+  border-radius: 8px;
+  /* Optional: adds rounded corners */
+  background-color: #fff;
+  /* Optional: adds a background color */
+  margin: 10px;
+  /* Optional: adds spacing between boxes */
+  padding: 20px;
+  /* Keeps internal padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: adds a shadow for depth */
+}
+
+.info-box {
+  background-color: #082B59;
+  /* Background color of the box */
+  border: 1px solid #082B59;
+  /* Border for the box */
+  border-radius: 5px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Padding inside the box */
+  margin-bottom: 30px;
+  /* Space below the box */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.container-fluid {
+  padding: 50px 0;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  /* Space between form fields */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  /* Bootstrap primary color */
+  border-color: #007bff;
+  /* Border color for the button */
+}
+
+
+.image-above-h4 {
+  width: 150px;
+  /* Set a fixed width */
+  height: 150px;
+  /* Set a fixed height */
+  object-fit: cover;
+  /* Ensures the image covers the box without stretching */
+  margin-bottom: 15px;
+  /* Adds space below the image */
+  border-radius: 8px;
+  /* Optional: adds rounded corners to images */
+}
+
+.product-box {
+  background-color: #082B59;
+  /* Dark background for contrast */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Padding inside the box */
+  margin: 10px;
+  /* Margin between boxes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+}
+
+.product-box img {
+  max-width: 150px;
+  /* Responsive image */
+  height: 150px;
+  /* Maintain aspect ratio */
+  border-radius: 10px;
+  /* Match the box rounding */
+}
+
+.text-container {
+  text-align: center;
+  /* Align text to the left */
+  margin-top: 10px;
+  /* Space between image and text */
+}
+
+.custom-button:hover {
+  background-color: #082B59;
+  /* Change this for hover effect */
+}
+
+
+/*---Media Queries --*/
+
+
+@media (max-width: 992px) {
+
+  /* Modal Image Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(8, 43, 89, 0.1);
+  }
+
+  /* Modal Text Styles */
+  .modal-content h2 {
+    margin-top: 20px;
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-bottom: -10px;
+  }
+
+  .modal-content p {
+    color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .modal-content h3 {
+    color: #f2f2f2;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  /* Updated Button Style */
+
+  .modal-button {
+    background-color: #ffffff;
+    color: #082B59;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0;
+  }
+
+  .modal-button:hover {
+    background-color: #0a3670;
+    transform: translateY(-2px);
+  }
+
+  /* Divider Line */
+  .modal-divider {
+    height: 2px;
+    background-color: rgba(8, 43, 89, 0.1);
+    margin: 20px auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+
+
+
+
+  @media (max-width: 576px) {
+
+
+    /*---Firefox Bug Fix --*/
+    .carousel-item {
+      transition: -webkit-transform 0.5s ease;
+      transition: transform 0.5s ease;
+      transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+      -webkit-backface-visibility: visible;
+      backface-visibility: visible;
+    }
+
+    /*--- Bootstrap Padding Fix --*/
+    [class*="col-"] {
+      padding: 1rem;
+    }
+
+    /* General Styles */
+    .contact-title {
+      color: #082B59;
+      padding-bottom: 20px;
+    }
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 1.75rem;
+      /* Adjust heading size for tablets */
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      /* Adjust paragraph size */
+    }
+
+    .form-group label {
+      font-size: 1rem;
+      /* Adjust label size */
+    }
+
+    .form-control {
+      font-size: 1rem;
+      /* Adjust input font size */
+    }
+
+    .btn.custom-button {
+      font-size: 1rem;
+      /* Adjust button font size */
+      width: 100%;
+      /* Make the button full width */
+    }
+
+    /* Margin for the form fill-out section on mobile */
+    .row.justify-content-center {
+      margin: 0 15px;
+      /* Add margin on each side */
+    }
+
+    /* Additional spacing adjustments */
+    .form-group {
+      margin-bottom: 15px;
+      /* Space between form elements */
+    }
+  }
+
+  @media (max-width: 576px) {
+    .contact-title {
+      font-size: 1.5rem;
+      /* Further adjust heading size for mobile */
+    }
+
+    .info-box p {
+      font-size: 0.9rem;
+      /* Further adjust paragraph size for mobile */
+    }
+  }
+
+
+
+  /*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
